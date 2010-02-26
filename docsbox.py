@@ -113,7 +113,7 @@ def main():
     for doc, entry in google_documents.items():
         if not local_documents.has_key(doc):
             print " Found a new document <%s>..." % doc
-            download(client, entry)
+            download(client, entry, BOX_PATH)
         else:
             fpath = local_documents[doc]
             google_updated = entry_updated(entry)
